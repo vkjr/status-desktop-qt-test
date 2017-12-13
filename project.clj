@@ -5,6 +5,8 @@
                       :url  "http://www.eclipse.org/legal/epl-v10.html"}
             :dependencies [[org.clojure/clojure "1.9.0-alpha16"]
                            [org.clojure/clojurescript "1.9.542"]
+                           [hickory "0.7.1"]
+                           [com.taoensso/timbre "4.10.0"]
                            [reagent "0.7.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server cljsjs/create-react-class]]
 [re-frame "0.9.2"]]
             :plugins [[lein-cljsbuild "1.1.4"]
@@ -40,9 +42,10 @@
 
                        :prod {:cljsbuild {:builds [
                                                    {:id           "ios"
-                                                    :source-paths ["src" "env/prod"]
-                                                    :compiler     {:output-to     "index.ios.js"
-                                                                   :main          "env.ios.main"
+                                                    :source-paths ["src_front" "src_front_profile/prod-qt"
+                                                                   "../status-react/src"]
+                                                    :compiler     {:output-to     "index.js"
+                                                                   :main          "status-desktop-front.init"
                                                                    :output-dir    "target/ios"
                                                                    :static-fns    true
                                                                    :optimize-constants true

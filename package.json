@@ -10,7 +10,15 @@
 		"babel-plugin-transform-es2015-block-scoping": "6.15.0",
 		"react": "^16.0.0-alpha.8",
 		"react-dom": "16.0.0-alpha.8",
-		"react-native": "git+https://github.com/status-im/react-native-desktop#feature/run-status-im"
+		"react-native": "git+https://github.com/status-im/react-native-desktop#feature/run-status-im",
+		"web3": "github:status-im/web3.js#status-develop",
+		"chance": "1.0.4",
+		"eccjs": "0.3.1",
+		"homoglyph-finder": "^1.1.1",
+		"identicon.js": "github:status-im/identicon.js",
+		"awesome-phonenumber": "^1.0.13",
+		"emojilib": "^2.2.1",
+		"status-nodejs": "git+https://github.com/status-im/status-nodejs.git"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
