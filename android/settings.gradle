@@ -1,0 +1,3 @@
+rootProject.name = 'StatusDesktopQtTest'
+
+include ':app'
