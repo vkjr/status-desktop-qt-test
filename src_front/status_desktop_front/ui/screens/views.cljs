@@ -3,7 +3,8 @@
   (:require [status-desktop-front.react-native-web :as react]
             [status-desktop-front.ui.screens.chat.view :as chat.view]
             [status-desktop-front.ui.screens.accounts.views :as accounts.views]
-            [status-desktop-front.ui.screens.accounts.login.views :as login.views]))
+            [status-desktop-front.ui.screens.accounts.login.views :as login.views]
+            status-im.ui.screens.subs))
 
 (views/defview main []
   (views/letsubs [view-id [:get :view-id]

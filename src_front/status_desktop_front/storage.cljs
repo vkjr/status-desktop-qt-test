@@ -1,10 +1,12 @@
 (ns status-desktop-front.storage
-  (:require [alandipert.storage-atom :refer [local-storage]]))
+  ;(:require [alandipert.storage-atom :refer [local-storage]])
+  )
 
 ;;;; ACCOUNTS
 
 ;; I would love to have something similar in status-react instead realm
-(def accounts (local-storage (atom []) :accounts))
+;(def accounts (local-storage (atom []) :accounts))
+(def accounts (atom {}))
 (def account (atom {}))
 
 (defn save-account [account]
@@ -14,8 +16,9 @@
   @accounts)
 
 (defn change-account [address new-account?]
-  (swap! account assoc
-         :contacts (local-storage (atom {}) (keyword (str address "contacts")))))
+  ;(swap! account assoc
+  ;       :contacts (local-storage (atom {}) (keyword (str address "contacts"))))
+  )
 
 
 ;;;; CONTACTS
